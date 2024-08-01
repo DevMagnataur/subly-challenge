@@ -1,4 +1,4 @@
-export interface Medium {
+export interface IMedium {
   name: string;
   cover: string;
   languages: string[];

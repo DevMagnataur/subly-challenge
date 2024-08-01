@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
 import Card from '../Card';
-import { Medium } from '../../types';
+import { IMedium } from '../../types';
 
 interface IProps {
-  media: Medium[];
+  media: IMedium[];
 }
 
 const Medium: React.FC<IProps> = (props) => {
@@ -17,7 +17,7 @@ const Medium: React.FC<IProps> = (props) => {
             <Card
               cover={medium.cover}
               name={medium.name}
-              last_editied={'xyz'}
+              last_editied={medium.updatedAt}
             />
           </Grid>
         ))}

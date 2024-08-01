@@ -7,3 +7,9 @@ export interface IMedium {
   createdAt: string;
   updatedAt: string;
 }
+
+export enum IStatus {
+  ERROR = 'error',
+  READY = 'ready',
+  TRANSCRIBING = 'transcribing',
+}

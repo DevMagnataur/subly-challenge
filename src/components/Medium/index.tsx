@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid } from '@mui/material';
 import Card from '../Card';
-import { IMedium } from '../../types';
+import { IMedium, IStatus } from '../../types';
 
 interface IProps {
   media: IMedium[];
@@ -18,6 +18,8 @@ const Medium: React.FC<IProps> = (props) => {
               cover={medium.cover}
               name={medium.name}
               last_editied={medium.updatedAt}
+              status={medium.status as IStatus}
+              languages={medium.languages}
             />
           </Grid>
         ))}

@@ -7,7 +7,7 @@ interface IProps {
   media: Medium[];
 }
 
-const ParentComponent: React.FC<IProps> = (props) => {
+const Medium: React.FC<IProps> = (props) => {
   const { media } = props;
   return (
     <Container>
@@ -26,4 +26,4 @@ const ParentComponent: React.FC<IProps> = (props) => {
   );
 };
 
-export default ParentComponent;
+export default Medium;

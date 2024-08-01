@@ -37,7 +37,15 @@ const StatusCard: React.FC<IProps> = (props) => {
       >
         {status == IStatus.READY ? (
           <>
-            <CardMedia component='img' height='200' image={cover} alt={'img'} />
+            <CardMedia
+              sx={{
+                filter: hover ? 'blur(4px)' : 'none',
+              }}
+              component='img'
+              height='200'
+              image={cover}
+              alt={'img'}
+            />
             {hover && (
               <Box
                 sx={{
@@ -46,7 +54,6 @@ const StatusCard: React.FC<IProps> = (props) => {
                   left: 0,
                   right: 0,
                   bottom: 0,
-                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',

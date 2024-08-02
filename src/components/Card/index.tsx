@@ -7,6 +7,7 @@ import {
   Box,
   Button,
   IconButton,
+  LinearProgress,
 } from '@mui/material';
 import { calculateTime } from '../../utils/date.utils';
 import { Delete, Edit, Translate } from '@mui/icons-material';
@@ -112,6 +113,41 @@ const StatusCard: React.FC<IProps> = (props) => {
                 </Box>
               </Box>
             )}
+          </>
+        ) : status == IStatus.TRANSCRIBING ? (
+          <>
+            <CardMedia
+              component='img'
+              height='200'
+              image={cover}
+              alt={'das'}
+              sx={{ filter: 'brightness(50%)' }}
+            />
+            <Box
+              sx={{
+                position: 'absolute',
+                top: -90,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+              }}
+            >
+              <Typography variant='h6' component='div'>
+                Transcribing subtitles
+              </Typography>
+              <Typography variant='body2' component='div' mb={2}>
+                {name}
+              </Typography>
+              <LinearProgress
+                sx={{ width: '80%', color: '#8253EE', height: '4px' }}
+                variant='indeterminate'
+              />
+            </Box>
           </>
         ) : (
           <CardContent sx={{ backgroundColor: '#ffe6e6', height: '170px' }}>

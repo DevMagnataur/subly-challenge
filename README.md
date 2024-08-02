@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Why Vite?
 
-Currently, two official plugins are available:
+I chose Vite for this project, cuz it gives us super quick server start times, creates production builds that are optimized and efficient, keeping our final bundle size nice and small, also supports TypeScript right out of the box.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Why Material UI?
 
-## Expanding the ESLint configuration
+I chose this framework cuz it comes with a set of pre-designed components, and the technical assignment included to create card components.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Architecture
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+for my resusable components, I've created a component folder, from where these components could be exported, on different pages, and to fecth data I've created a servcie folder, and imported endpoints from a conts file in the data folder, this way if the projects extends we can create multiple services, to calculate the no.of day i had create a date util inside the util folder, which works as a shared directory for the whole project.
